@@ -1,0 +1,25 @@
+<body>
+  <div class="login">
+    <div class="form">
+      <form [formGroup]="loginForm" (submit)="autentication()" class="login-form">
+        <h1 class="material-icons">Bienvenido </h1>
+
+        <div class="container mb-3">
+
+          <input type="email" formControlName="correo" placeholder="alguien@example.com " required />
+        </div>
+
+        <div class="container mb-3">
+
+          <input formControlName="pass" type="password" placeholder="Contraseña" required />
+
+
+        </div>
+
+        <button>Entrar</button>
+
+      </form>
+
+    </div>
+  </div>
+</body>

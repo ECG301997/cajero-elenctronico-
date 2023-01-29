@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(158deg, rgb(107, 207, 214) 25%, rgb(159, 179, 190) 50%, rgba(0,212,255,1) 75%);
+}
+
+.inicio{
+    display: flex;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.btn-dark{
+    width: 120px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px; 
+}
+
+.titulo{
+    width: 600px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 30%;
+    display: inline-block;  
+}
+
+.container{
+    margin-left: 40%;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    width: 300px;
+    background: rgb(2,0,36);
+    background: linear-gradient(158deg, rgb(107, 207, 214) 25%, rgb(159, 179, 190) 50%, rgba(0,212,255,1) 75%);
+    border: 2px solid rgb(0, 0, 0);
+    display: center;
+    align-items: center;
+}

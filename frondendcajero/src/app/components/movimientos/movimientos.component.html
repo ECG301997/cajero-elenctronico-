@@ -1,0 +1,42 @@
+<body>
+
+  <div >
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" (click)="volver()">REGRESAR </a>
+      
+      
+      <button  class="btn btn-danger" (click)= 'closesecion()'> cerrar sesion</button>
+    </nav>
+  </div>
+  <br>
+  <div class="container">
+    <h1>HISTORIAL DE TRANSACCIONES </h1>
+  </div>
+  <div class="container">
+    <table class="table table-dark table-hover center"  style="height: 100px;">
+      <thead>
+        <tr>
+          
+          <th scope="col">DOCUMENTO</th>
+          <th scope="col">FECHA </th>
+          <th scope="col"> TIPO DE MOVIMIENTO</th>
+          <th>SALDO</th>
+        </thead>
+        <tbody >
+          <tr *ngFor="let mov of listMov">
+            <td scope="col">{{mov.documento}}</td>
+            <td scope="row">{{mov.fecha}}</td>
+            <td scope="row">{{mov.tipoMov}}</td>
+            <td scope="row">{{mov.saldo}}</td>
+            
+            
+            
+          </tr>
+          
+        </tbody>
+      
+
+      </table>
+      
+    </div>
+  </body>

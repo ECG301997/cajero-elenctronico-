@@ -1,0 +1,106 @@
+<br>
+<div class="container mt-5" id="fondo">
+    <h1 class="title"> CREAR USUARIO NUEVO</h1>
+ 
+  <br>
+     <form class="form" [formGroup]="userForm" (submit)="createUser()">
+
+
+        <div class="container mb-3">
+
+            <input type="text" formControlName="nombres" class="form-control" placeholder="Nombres " required>
+            <div class="text-danger"*ngIf="nombres?.dirty &&(nombres?.dirty || nombres?.touched) && userForm.get('nombres')?.hasError('required')">
+                <span>Los nombres son <strong>obligatorios</strong></span>
+                </div>
+              
+            
+           
+        </div>
+
+   
+        
+
+        <div class="container mb-3">
+
+            <input type="email" formControlName="email" 
+            class="form-control" placeholder="alguien@example.com ">
+            <div *ngIf="email?.dirty &&(email?.dirty || email?.touched)">
+            <div class="text-danger"*ngIf="userForm.get('email')?.hasError('required')">
+            <span>el correo es <strong>obligatorio</strong></span>
+            </div>
+            <div class="text-danger"
+            *ngIf="userForm.get('email')?.hasError('email')">
+            <span>debe propocionar un correo <strong>válido</strong></span>
+            </div>
+        </div>
+        </div>
+
+            
+        
+
+         <div class="container mb-3">
+             <input type="password"  placeholder="contraseña" formControlName="contrasena" class="form-control" >
+             <div *ngIf="contrasena?.dirty &&(contrasena?.dirty || contrasena?.touched)">
+                <div class="text-danger" *ngIf="userForm.get('contrasena')?.hasError('pattern')">
+           
+                    <strong>tienes ingresar una contraseña con carcteres numericos y solo 4 caracteres </strong>
+                </div> 
+
+                <div class="text-danger" *ngIf="userForm.get('contrasena')?.hasError('required')">
+                    <span>la contraseña es   <strong>obligatoria</strong></span>
+                </div>
+
+            
+                </div> 
+                
+                </div>
+
+
+                <div class="container mb-3">
+                    <input type="number"  placeholder="documento" formControlName="documento" class="form-control" >
+                    <div *ngIf="documento?.dirty &&(documento?.dirty || documento?.touched)">
+              
+                    <div class="text-danger" *ngIf="userForm.get('documento')?.hasError('pattern')">
+                        <strong>el documento solo tiene 10 caracteres  </strong>
+                       </div> 
+       
+                       
+                    
+                       
+                       
+                       <div class="text-danger" *ngIf="userForm.get('documento')?.hasError('required')">
+                
+                       <span>el  documento  es <strong>obligatorio</strong></span>
+                       </div>
+       
+                   
+                       </div> 
+                       
+                       </div>
+
+                <div class="container mb-3">
+                    
+
+                <select  class="form-control"  aria-placeholder="rol" formControlName="tipoUser">
+                    <option value="admin">admin</option>
+                    <option value="visitante">user</option>
+            
+                </select> 
+         </div>
+
+
+   
+
+   
+        <div class="container mb-3">
+           <button class="btn btn-dark btn-sm"> Enviar</button>
+
+        </div>
+
+        <br>
+    </form>
+
+    <div class="container mb-3">
+    <button style="margin-left: 5px;" class="btn btn-dark btn-sm" routerLink="/home"> Volver</button>
+    </div>
+</div>

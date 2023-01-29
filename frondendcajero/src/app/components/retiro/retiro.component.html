@@ -1,0 +1,18 @@
+<body>
+    <div class="inicio">
+        <i routerLink="/home" class="btn btn-dark">VOLVER</i>
+        <h1 class="titulo">RETIRAR</h1>
+    </div>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h6>Ingrese el monto a retirar</h6>
+                <form [formGroup]="movForm" (submit)="consignarDinero()">
+                    <input type="number" formControlName="valorRetiro">
+                    <button class="btn btn-dark btn-sm">Retirar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
