@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterOutlet } from '@angular/router';
 import { usuario } from 'src/app/models/usuario';
 import swal from 'sweetalert2';
-import {RegistrosService} from 'src/app/services/registros.service'
+import {RegistrosService} from 'src/app/services/registros.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPerson();
-    this.inactividad();
+   // this.inactividad();
   }
 
 

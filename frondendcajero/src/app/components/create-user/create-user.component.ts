@@ -63,7 +63,10 @@ createUser(){
           title: `algo salio mal intenta de nuevo`,
         
         })
+        this.router.navigate(['/home']);
+
       }
+      
     )
   }
 
