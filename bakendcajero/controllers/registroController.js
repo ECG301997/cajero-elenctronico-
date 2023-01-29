@@ -43,7 +43,7 @@ const retiroDinero = async(req,res)=>{
             });
           
            if(saldo < valorRetiro){
-            res.json({error: 'saldo insuficiente'})
+            res.status(400).send("Saldo insuficiente");
 
            }else{
             let saldoActual = saldo -valorRetiro;
